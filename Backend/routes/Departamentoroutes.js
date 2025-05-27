@@ -1,11 +1,11 @@
 const express = require ("express");
 const router = express.Router();
-const departamentomodelo = require("../modelo/Departamentomodelo.js");
+const departamentocontrol = require("../controllers/Departamentocontrol.js");
 
-router.get("/",departamentomodel.consultarDetalle);
-router.post("/",departamentomodel.ingresar);
+router.get("/",departamentocontrol.consultarDetalle);
+router.post("/",departamentocontrol.ingresar);
 
 router.route("/:iden")
-.get(departamentomodel.consultarDetalle);
+.get(departamentocontrol.consultarDetalle);
 
 module.exports = router;

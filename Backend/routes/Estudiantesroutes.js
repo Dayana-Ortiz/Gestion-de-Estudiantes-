@@ -1,11 +1,11 @@
 const express = require ("express");
 const router = express.Router();
-const estudiantemodelo = require("../modelo/Estudiantemodelo.js");
+const estudiantecontrol = require("../controllers/Estudiantecontrol.js");
 
-router.get("/",estudiantemodel.consultarDetalle);
-router.post("/",estudiantemodel.ingresar);
+router.get("/",estudiantecontrol.consultarDetalle);
+router.post("/",estudiantecontrol.ingresar);
 
 router.route("/:iden")
-.get(estudiantemodel.consultarDetalle);
+.get(estudiantecontrol.consultarDetalle);
 
 module.exports = router;

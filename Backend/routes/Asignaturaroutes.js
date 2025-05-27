@@ -1,11 +1,11 @@
 const express = require ("express");
 const router = express.Router();
-const asignaturamodelo = require("../modelo/Asignaturamodelo.js");
+const asignaturacontrol = require("../controllers/Asignaturacontrol.js");
 
-router.get("/",asignaturamodel.consultarDetalle);
-router.post("/",asignaturamodel.ingresar);
+router.get("/",asignaturacontrol.consultarDetalle);
+router.post("/",asignaturacontrol.ingresar);
 
 router.route("/:iden")
-.get(asignaturamodel.consultarDetalle);
+.get(asignaturacontrol.consultarDetalle);
 
 module.exports = router;

@@ -1,11 +1,11 @@
 const express = require ("express");
 const router = express.Router();
-const asistenciamodelo = require("../modelo/Asistenciamodelo.js");
+const asistenciacontrol = require("../controllers/Asistenciacontrol.js");
 
-router.get("/",asistenciamodel.consultarDetalle);
-router.post("/",asistenciamodel.ingresar);
+router.get("/",asistenciacontrol.consultarDetalle);
+router.post("/",asistenciacontrol.ingresar);
 
 router.route("/:iden")
-.get(asistenciamodel.consultarDetalle);
+.get(asistenciacontrol.consultarDetalle);
 
 module.exports = router;
