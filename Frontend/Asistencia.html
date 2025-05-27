@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta id="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestión por Asistencia</title>
+  <link rel="stylesheet" href="../Styles/Asist.css" />
+</head>
+
+<body>
+  <a href="../index.html">← Volver</a>
+  <h1>Gestión por Asistencia</h1>
+
+  <!-- 🔍 Buscador -->
+  <div class="search">
+    <input type="text" id="busqueda" placeholder="Buscar por estado de asistencia" oninput="filtrarTabla()" />
+  </div>
+
+  <!-- 📝 Formulario para agregar estudiante -->
+  <form id="form-estudiante" onsubmit="agregarEstudiante(event)">
+    <input type="text" id="nombre" placeholder="Nombre completo" required />
+    <input type="text" id="documento" placeholder="Documento" required />
+    <select id="asistencia" required>
+      <option value="" disabled selected>Seleccione asistencia</option>
+      <option value="1">Asistió</option>
+      <option value="0">No asistió</option>
+      <option value="r">Retardo</option>
+    </select>
+    <button type="submit">Agregar estudiante</button>
+  </form>
+
+  <!-- 📋 Tabla de estudiantes -->
+  <h2>Listado de Estudiantes</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Documento</th>
+        <th>Asistencia</th>
+      </tr>
+    </thead>
+    <tbody id="tabla-estudiantes"></tbody>
+  </table>
+
+  <!-- 📦 Script -->
+  <script src="../Scripts/Asists.js"></script>
+</body>
+
+</html>

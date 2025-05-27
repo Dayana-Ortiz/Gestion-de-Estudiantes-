@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta id="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestión por Departamento</title>
+  <link rel="stylesheet" href="../Styles/departamento.css" />
+</head>
+
+<body>
+  <a href="../index.html">← Volver</a>
+  <h1>Gestión por Departamento</h1>
+
+  <!-- 🔍 Buscador -->
+  <div class="search">
+    <input type="text" id="busqueda" placeholder="Buscar por nombre de facultad" />
+    <button onclick="filtrarTabla()" class="btn btn-buscar">Buscar</button>
+  </div>
+
+  <!-- ➕ Botón para abrir modal de nueva facultad -->
+  <button onclick="document.getElementById('modalAgregarFacultad').style.display='block'" class="btn btn-agregar">
+    + Agregar nueva facultad
+  </button>
+
+  <!-- 📋 Tabla de departamentos -->
+  <h2>Listado de Departamentos</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Documento</th>
+        <th>Departamento</th>
+      </tr>
+    </thead>
+    <tbody id="tabla-estudiantes"></tbody>
+  </table>
+
+  <!-- 🧩 Modal Agregar Facultad -->
+  <div id="modalAgregarFacultad" class="modal">
+    <div class="modal-content">
+      <h3>Agregar Nueva Facultad</h3>
+      <input type="text" id="nueva-nombre-facultad" placeholder="Nombre de la nueva facultad" required />
+      <div class="modal-actions">
+        <button onclick="guardarNuevaFacultad()" class="btn btn-primary">Guardar</button>
+        <button onclick="cerrarModalAgregarFacultad()" class="btn btn-cancelar">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 🛠 Modal Modificar Facultad -->
+  <div id="modalModificarFacultad" class="modal">
+    <div class="modal-content">
+      <h3>Modificar Facultad</h3>
+      <input type="text" id="nombre-facultad" placeholder="Nuevo nombre de la facultad" required />
+      <div class="modal-actions">
+        <button onclick="guardarModificacionFacultad()" class="btn btn-primary">Guardar</button>
+        <button onclick="cerrarModalModificarFacultad()" class="btn btn-cancelar">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 📦 Script -->
+  <script src="../Scripts/Departamento.js"></script>
+</body>
+
+</html>

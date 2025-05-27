@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestión de Asignaturas</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9fafb;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 40px 0;
+      font-size: 2.5em;
+      background-color: #1e293b;
+      color: #fff;
+      border-radius: 0 0 15px 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    nav {
+      background-color: #0f172a;
+      padding: 10px 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 40px;
+    }
+
+    nav ul li a {
+      color: #f1f5f9;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: #334155;
+    }
+
+    section {
+      width: 90%;
+      max-width: 600px;
+      margin: 30px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    section h2 {
+      margin-bottom: 20px;
+      color: #1e293b;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    form input[type="text"],
+    form input[type="submit"] {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+    }
+
+    form input[type="submit"] {
+      background-color: #3b82f6;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      transition: background 0.3s;
+      cursor: pointer;
+    }
+
+    form input[type="submit"]:hover {
+      background-color: #2563eb;
+    }
+
+    hr {
+      width: 90%;
+      max-width: 600px;
+      margin: 40px auto;
+      border: none;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    button {
+      display: block;
+      margin: 30px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #1e40af;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1d4ed8;
+    }
+  </style>
+</head>
+<body>
+   <a href="../index.html">← Volver</a>
+  <h1>Gestión de Asignaturas</h1>
+
+  <nav>
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Estudiantes</a></li>
+      <li><a href="#">Docentes</a></li>
+      <li><a href="#">Asignaturas</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <h2>Registrar Asignatura</h2>
+    <form>
+      <input type="text" id="nombre_asignatura" placeholder="Nombre de la Asignatura" required>
+      <input type="text" id="codigo" placeholder="Código de la Asignatura" required>
+      <input type="text" id="creditos" placeholder="Créditos de la Asignatura" required>
+      <input type="text" id="seccion" placeholder="Sección de la Asignatura" required>
+      <input type="text" id="semestre" placeholder="Semestre" required>
+      <input type="submit" value="Registrar">
+    </form>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>Consultar Asignatura</h2>
+    <form>
+      <input type="text" id="codigo_Asignatura" placeholder="Buscar por Código" required>
+      <input type="text" id="nombre_asignatura" placeholder="Buscar por Nombre" required>
+      <input type="submit" value="Consultar">
+    </form>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>Modificar Asignatura</h2>
+    <form>
+      <input type="text" id="codigo" placeholder="Código de la Asignatura" required>
+      <input type="text" id="seccion" placeholder="Sección de la Asignatura" required>
+      <input type="text" id="semestre" placeholder="Semestre" required>
+      <input type="text" id="nuevo_nombre_Asignatura" placeholder="Nuevo Nombre">
+      <input type="text" id="nueva_cantidad_creditos" placeholder="Nueva Cantidad de Créditos">
+      <input type="submit" value="Modificar">
+    </form>
+  </section>
+
+  <a href="Index.html"><button>Volver al Menú Principal</button></a>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta id="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestión de Estudiantes</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9fafb;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      padding: 20px;
+      background-color: #1e293b;
+      color: #fff;
+      border-radius: 0 0 15px 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    section {
+      width: 90%;
+      max-width: 700px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    h2 {
+      margin-bottom: 10px;
+      color: #1d4ed8;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: 500;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #cbd5e1;
+    }
+    button, input[type="submit"] {
+      margin-top: 15px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px;
+      background-color: #2563eb;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover, input[type="submit"]:hover {
+      background-color: #1d4ed8;
+    }
+    hr {
+      margin: 40px auto;
+      width: 80%;
+      border: 1px solid #e5e7eb;
+    }
+    a {
+      display: block;
+      width: fit-content;
+      margin: 20px auto;
+      text-align: center;
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+   <a href="../index.html">← Volver</a>
+  <h1>Gestión de Estudiantes</h1>
+  <section>
+    <h2>Registrar Estudiante</h2>
+    <form id="form-registro-estudiante">
+      <label>Nombre:</label>
+      <input type="text" id="nombre" required />
+      <label>Documento:</label>
+      <input type="text" id="cedula" required />
+      <label>Tipo de documento:</label>
+      <input type="text" id="tipo_documento" required />
+      <input type="submit" value="Registrar">
+    </form>
+  </section>
+  <hr>
+  <section>
+    <h2>Consultar Estudiante</h2>
+    <form id="form-consultar-estudiante">
+      <label>Cédula:</label>
+      <input type="text" id="cedula_buscar" required />
+      <label>Tipo de documento:</label>
+      <input type="text" id="tipoDocumento_buscar" required />
+      <input type="submit" value="Consultar">
+    </form>
+  </section>
+  <hr>
+  <section>
+    <h2>Modificar Estudiante</h2>
+    <form id="form-modificar-estudiante">
+      <label>Cédula:</label>
+      <input type="text" id="cedula_buscar" required />
+      <label>Tipo de documento:</label>
+      <input type="text" id="tipoDocumento_buscar" required />
+      <label>Nuevo Nombre:</label>
+      <input type="text" id="nuevo_nombre" />
+      <label>Nuevo Tipo de documento:</label>
+      <input type="text" id="nuevo_tipoDocumento" />
+      <input type="submit" value="Modificar">
+    </form>
+  </section>
+  <hr>
+  <section>
+    <h2>Registrar Estudiante en Asignatura</h2>
+    <form id="form-registro-asignatura">
+      <label>Documento del Estudiante:</label>
+      <input type="text" id="cedula_estudiante" required />
+      <label>Tipo de documento:</label>
+      <input type="text" id="tipo_documento" required />
+      <label>Código de la Asignatura:</label>
+      <input type="text" id="codigo_Asignatura" required />
+      <label>Grupo de Asignatura:</label>
+      <input type="text" id="grupo_Asignatura" required />
+      <label>Semestre:</label>
+      <input type="text" id="semestre" required />
+      <input type="submit" value="Registrar en Asignatura">
+    </form>
+  </section>
+  <hr>
+  <section>
+    <h2>Consultar Estudiantes por Asignatura</h2>
+    <form id="form-consultar-asignatura">
+      <label>Código de la Asignatura:</label>
+      <input type="text" id="codigo_Asignatura" required />
+      <label>Grupo de la Asignatura:</label>
+      <input type="text" id="grupo_Asignatura" required />
+      <input type="submit" value="Consultar">
+    </form>
+  </section>
+  <a href="../index.html">← Volver al Menú Principal</a>
+</body>
+</html>
