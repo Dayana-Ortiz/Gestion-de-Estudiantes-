@@ -2,10 +2,10 @@ const express = require ("express");
 const router = express.Router();
 const asistenciamodelo = require("../modelo/Asistenciamodelo.js");
 
-router.get("/",asistenciamodelo.consultarDetalle);
-router.post("/",asistenciamodelo.ingresar);
+router.get("/",asistenciamodel.consultarDetalle);
+router.post("/",asistenciamodel.ingresar);
 
 router.route("/:iden")
-.get(asistenciamodelo.consultarDetalle);
+.get(asistenciamodel.consultarDetalle);
 
 module.exports = router;

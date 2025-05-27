@@ -2,10 +2,10 @@ const express = require ("express");
 const router = express.Router();
 const asignaturamodelo = require("../modelo/Asignaturamodelo.js");
 
-router.get("/",asignaturamodelo.consultarDetalle);
-router.post("/",asignaturamodelo.ingresar);
+router.get("/",asignaturamodel.consultarDetalle);
+router.post("/",asignaturamodel.ingresar);
 
 router.route("/:iden")
-.get(asignaturamodelo.consultarDetalle);
+.get(asignaturamodel.consultarDetalle);
 
 module.exports = router;
