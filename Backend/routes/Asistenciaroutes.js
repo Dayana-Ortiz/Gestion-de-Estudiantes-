@@ -1,6 +1,6 @@
 const express = require ("express");
 const router = express.Router();
-const asistenciamodelo = require("../modelo/asistenciamodelo.js");
+const asistenciamodelo = require("../modelo/Asistenciamodelo.js");
 
 router.get("/",asistenciamodelo.consultarDetalle);
 router.post("/",asistenciamodelo.ingresar);

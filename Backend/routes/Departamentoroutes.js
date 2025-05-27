@@ -1,6 +1,6 @@
 const express = require ("express");
 const router = express.Router();
-const departamentomodelo = require("../modelo/departamentomodelo.js");
+const departamentomodelo = require("../modelo/Departamentomodelo.js");
 
 router.get("/",departamentomodelo.consultarDetalle);
 router.post("/",departamentomodelo.ingresar);
