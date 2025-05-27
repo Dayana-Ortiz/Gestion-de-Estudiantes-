@@ -4,7 +4,7 @@ const serverless = require("serverless-http");
 
 const app = express();
 const router = express.Router();
-const estudiantesroutes = require("../../Backend/routes/Estudiantesrutas.js");
+const estudiantesroutes = require("../../Backend/routes/Estudiantesroutes.js");
 
 // Middlewares
 app.use(express.json());
